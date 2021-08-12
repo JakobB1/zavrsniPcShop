@@ -40,7 +40,7 @@ public class Start {
 	}
 	
 	
-	 
+	
     ///////////
     //// POCETAK KORISNIK
     ///////////
@@ -131,6 +131,10 @@ public class Start {
 		}
 		
 	}
+	
+    ///////////
+    //// KRAJ DJELATNIK
+    ///////////
 
 	public static void main(String[] args) {
 		new Start();
