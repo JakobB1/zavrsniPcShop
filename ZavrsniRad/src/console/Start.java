@@ -98,7 +98,7 @@ public class Start {
 		k.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
 				"sifra mora biti cijeli broj",
 				1, Integer.MAX_VALUE));
-		k.setIme(Ulaz.ucitajString("Unesite ime korisnika; ",
+		k.setIme(Ulaz.ucitajString("Unesite ime korisnika: ",
 				"Ime obavezno"));
 		k.setPrezime(Ulaz.ucitajString("Unesi prezime korisnika: ",
 				"Prezime obavezno"));
