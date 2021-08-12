@@ -96,7 +96,7 @@ public class Start {
 
 	private Korisnik korisnikPostaviVrijednosti(Korisnik k) {
 		k.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
-				"sifra mora biti cijeli broj",
+				"Sifra mora biti cijeli broj",
 				1, Integer.MAX_VALUE));
 		k.setIme(Ulaz.ucitajString("Unesite ime korisnika: ",
 				"Ime obavezno"));
