@@ -1,0 +1,2 @@
+# zavrsniPcShop
+Završni rad - ljeto
