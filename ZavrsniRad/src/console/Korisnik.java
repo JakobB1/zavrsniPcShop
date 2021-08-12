@@ -1,4 +1,4 @@
-package brkic.ljetnizadatak;
+package console;
 
 public class Korisnik {
 	

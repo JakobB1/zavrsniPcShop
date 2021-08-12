@@ -1,4 +1,4 @@
-package brkic.ljetnizadatak;
+package console;
 
 import java.util.Scanner;
 
