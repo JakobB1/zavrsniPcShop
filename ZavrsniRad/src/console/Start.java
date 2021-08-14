@@ -133,7 +133,7 @@ public class Start {
 	}
 	
     ///////////
-    //// KRAJ DJELATNIK
+    //// KRAJ KORISNIK
     ///////////
 
 	public static void main(String[] args) {
