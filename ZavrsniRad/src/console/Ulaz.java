@@ -20,7 +20,7 @@ public class Ulaz {
 						scanner.nextLine());
 				if (broj<min || broj>max) {
 					System.out.println("Broj ne smije biti manji od " + min
-				+ "ili veci od " + max);
+				+ " ili veci od " + max);
 					continue;
 				}
 				break;
