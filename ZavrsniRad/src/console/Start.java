@@ -56,10 +56,10 @@ public class Start {
 		System.out.println(" 4. Brisanje korisnika");
 		System.out.println(" 5. Povratak u prethodni izbornik");
 		
-		ucitajIzbornikAkciju();
+		korisnikUcitajAkciju();
 	}
 
-	private void ucitajIzbornikAkciju() {
+	private void korisnikUcitajAkciju() {
 		switch(Ulaz.ucitajInt("Odaberite akciju: ",
 				"Niste unijeli cijeli broj", 1, 5)) {
 		case 1 -> korinsikPregled();
@@ -138,6 +138,51 @@ public class Start {
     ///////////
 	
 	
+	
+    ///////////
+    //// POCETAK DJELATNIK
+    ///////////
+	
+	private void djelatnikIzbornik() {
+    	System.out.println("--------------------");	
+		System.out.println("Podizbornik 2. Djelatnici");		
+		System.out.println("Odaberite akciju");
+		System.out.println(" 1. Pregled unesenih djelatnika");
+		System.out.println(" 2. Unos novog djelatnika");
+		System.out.println(" 3. Promjena postojeceg djelatnika");
+		System.out.println(" 4. Brisanje djelatnika");
+		System.out.println(" 5. Povratak u prethodni izbornik");
+		djelatnikUcitajAkciju();
+	}
+	
+
+	private void djelatnikUcitajAkciju() {
+		switch(Ulaz.ucitajInt("Odaberite akciju: ",
+				"Niste unijeli cijeli broj", 1, 5)) {
+		case 1 -> djelatnikPregled();
+		case 2 -> djelatnikUnosNovog();
+		case 3 -> djelatnikPromjena();
+		case 4 -> djelatnikBrisanje();
+		case 5 -> glavniIzbornik();
+		}
+	}
+
+	private void djelatnikBrisanje() {
+		
+	}
+
+	private void djelatnikPromjena() {
+		
+	}
+
+	private void djelatnikUnosNovog() {
+		
+	}
+
+	private void djelatnikPregled() {
+		
+	}
+
 	public static void main(String[] args) {
 		new Start();
 	}
