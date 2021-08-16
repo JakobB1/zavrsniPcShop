@@ -8,10 +8,11 @@ import java.util.Scanner;
 public class Start {
 	
 	private List<Korisnik> korisnici;
+	private List<Djelatnik> djelatnici;
 	
 	public Start() {
 		korisnici = new ArrayList<Korisnik>();
-		
+		djelatnici = new ArrayList<Djelatnik>();
 		Ulaz.scanner = new Scanner(System.in);
 		glavniIzbornik();
 	}
