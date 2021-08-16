@@ -6,6 +6,7 @@ public class Ulaz {
 	
 	public static Scanner scanner;
 	
+	
 	public static int ucitajInt(
 			String poruka,
 			String greska,
@@ -30,6 +31,7 @@ public class Ulaz {
 		return broj;
 	}
 	
+	
 	public static String ucitajString(
 			String poruka, 
 			String greska) {
@@ -45,6 +47,7 @@ public class Ulaz {
 		}
 		return s;
 	}
+	
 	
 	public static double ucitajDouble(
 			String poruka, 
@@ -69,6 +72,7 @@ public class Ulaz {
 		}
 		return broj;
 	}
+	
 	
 	public static boolean ucitajBoolean (
 			String poruka,
