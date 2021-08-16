@@ -105,7 +105,7 @@ public class Start {
 		k.setEmail(Ulaz.ucitajString("Unesi email korisnika: ",
 				"Email obavezan"));
 		k.setBrojClanskeKartice(Ulaz.ucitajInt("Unesi broj clanske kartice korisnika: ",
-				"Broj kartice mora biti cijeli broj", 1, 9999));
+				"Broj kartice obavezan, mora biti cijeli broj", 1, 9999));
 		return k;
 	}
 
