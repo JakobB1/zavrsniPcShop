@@ -176,11 +176,44 @@ public class Start {
 	}
 
 	private void djelatnikUnosNovog() {
-		
+		Djelatnik d = new Djelatnik();
+		d = djelatnikPostaviVrijednosti(d);
+		djelatnici.add(d);
+		djelatnikIzbornik();
+	}
+
+	private Djelatnik djelatnikPostaviVrijednosti(Djelatnik d) {
+		d.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
+    			"Sifra mora biti cijeli broj",
+    			1, Integer.MAX_VALUE));
+    	d.setIme(Ulaz.ucitajString("Unesi ime predavaca: ",
+    			"Ime obavezno"));
+    	d.setPrezime(Ulaz.ucitajString("Unesi prezime predavaca: ",
+    			"Prezime obavezno"));
+    	d.setPcshop(Ulaz.ucitajString("Unesi ime PC Shop:", "Ime obavezno"));
+		return d;
 	}
 
 	private void djelatnikPregled() {
-		
+		djelatnikStavke("Pregled unesenih smjerova");
+		djelatnikIzbornik();
+	}
+
+	private void djelatnikStavke(String naslov) {
+		System.out.println(naslov);
+		System.out.println("--------------------");
+		if(djelatnici.size()==0) {
+			System.out.println("Nema unesenih djelatnika");
+		}else {
+			Djelatnik d;
+			for(int i=0;i<djelatnici.size();i++) {
+				d= djelatnici.get(i);
+				System.out.println((i + 1) + 
+						". " + d.getIme() + 
+						" " + d.getPrezime () + 
+						" " + d.getPcshop());
+			}	
+		}	
 	}
 
 	public static void main(String[] args) {
