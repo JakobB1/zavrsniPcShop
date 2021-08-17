@@ -381,7 +381,7 @@ public class Start {
 		p.setCijena(Ulaz.ucitajDouble("Unesi cijenu: ", 
 				"Cijena mora biti decimalni broj", 0, 100000));
 		p.setGarancija(Ulaz.ucitajDatum("Unesi datum pocetka: "));
-    
+        //// nastavak
 		return p;
 	}
 
