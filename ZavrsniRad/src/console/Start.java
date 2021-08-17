@@ -39,6 +39,15 @@ public class Start {
 		case 1:
 			korisnikIzbornik();
 			break;
+		case 2: 
+			djelatnikIzbornik();
+			break;
+		case 3: 
+			racunIzbornik();
+			break;
+		case 4: 
+			proizvodIzbornik();
+			break;
 		case 5:
 			System.out.println("Program je zavrsio, dovidenja!");
 			return;
