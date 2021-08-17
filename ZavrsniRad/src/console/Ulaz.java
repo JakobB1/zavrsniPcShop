@@ -1,6 +1,8 @@
 package console;
 
+import java.util.Date;
 import java.util.Scanner;
+import java.text.SimpleDateFormat;
 
 public class Ulaz {
 	
@@ -88,6 +90,21 @@ public class Ulaz {
 				return false;
 			}
 			System.out.println(greska + " (unos da/ne)");
+		}
+	}
+	
+public static final String FORMAT_DATUM="dd.MM.yyyy.";
+	
+	public static Date ucitajDatum(String poruka) {
+		SimpleDateFormat df = new SimpleDateFormat(FORMAT_DATUM);
+		while(true) {
+			System.out.print(poruka);
+			try {
+				return df.parse(scanner.nextLine());
+			} catch (Exception e) {
+				System.out.println("Ne ispravan format datuma."
+						+ "Primjer unosa: " +df.format(new Date()));
+			}
 		}
 	}
 }
