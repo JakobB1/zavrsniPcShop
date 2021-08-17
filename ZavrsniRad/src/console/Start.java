@@ -336,6 +336,76 @@ public class Start {
     //// POCETAK PROIZVOD
     ///////////
 	
+	private void proizvodIzbornik() {
+    	System.out.println("--------------------");	
+		System.out.println("Podizbornik 4. Proizvodi");		
+		System.out.println("Odaberite akciju");
+		System.out.println(" 1. Pregled unesenih proizvoda");
+		System.out.println(" 2. Unos novog proizvoda");
+		System.out.println(" 3. Promjena postojeceg proizvoda");
+		System.out.println(" 4. Brisanje proizvoda");
+		System.out.println(" 5. Povratak u prethodni izbornik");
+		proizvodUcitajAkciju();
+	}
+	
+	private void proizvodUcitajAkciju() {
+		switch(Ulaz.ucitajInt("Odaberite akciju: ", 
+				"Niste unijeli cijeli broj", 1, 5)) {
+		case 1 -> proizvodPregled();
+		case 2 -> proizvodUnosNovog();
+		case 3 -> proizvodPromjena();
+		case 4 -> proizvodBrisanje();
+		case 5 -> glavniIzbornik();
+		}
+	}
+
+	private void proizvodBrisanje() {
+		
+	}
+
+	private void proizvodPromjena() {
+		
+	}
+
+	private void proizvodUnosNovog() {
+		Proizvod p = new Proizvod();
+		p = proizvodPostaviVrijednosti(p);
+		proizvodi.add(p);
+		proizvodIzbornik();
+	}
+
+	private Proizvod proizvodPostaviVrijednosti(Proizvod p) {
+		p.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
+    			"Sifra mora biti cijeli broj",
+    			1, Integer.MAX_VALUE));
+		p.setCijena(Ulaz.ucitajDouble("Unesi cijenu: ", 
+				"Cijena mora biti decimalni broj", 0, 100000));
+		p.setGarancija(Ulaz.ucitajDatum("Unesi datum pocetka: "));
+    
+		return p;
+	}
+
+	private void proizvodPregled() {
+		proizvodStavke("Pregled unesenih smjerova");
+		proizvodIzbornik();
+	}
+
+	private void proizvodStavke(String naslov) {
+		System.out.println(naslov);
+		System.out.println("--------------------");
+		if(proizvodi.size()==0) {
+			System.out.println("Nema unesenih proizvoda");
+		}else {
+			Proizvod p;
+			for(int i=0;i<proizvodi.size();i++) {
+				p= proizvodi.get(i);
+				System.out.println((i + 1) + ". " + p.getCijena() + 
+						" " + p.getGarancija()
+						);
+			}	
+		}
+	}
+
 	public static void main(String[] args) {
 		new Start();
 	}

@@ -30,11 +30,11 @@ public class Proizvod {
 	public void setCijena(double cijena) {
 		this.cijena = cijena;
 	}
-	public Date getIstekGarancije() {
+	public Date getGarancija() {
 		return garancija;
 	}
-	public void setIstekGarancije(Date istekGarancije) {
-		this.garancija = istekGarancije;
+	public void setGarancija(Date garancija) {
+		this.garancija = garancija;
 	}
 	public String getOpisProizvoda() {
 		return opisProizvoda;
@@ -54,5 +54,5 @@ public class Proizvod {
 	public void setKodArtikla(String kodArtikla) {
 		this.kodArtikla = kodArtikla;
 	}
-	
+
 }
