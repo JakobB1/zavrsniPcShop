@@ -7,7 +7,7 @@ public class Proizvod {
 	private int sifra;
 	private String naziv;
 	private double cijena;
-	private Date istekGarancije;
+	private Date garancija;
 	private String opisProizvoda;
 	private boolean dostupnostZaKupnju;
 	private String kodArtikla;
@@ -31,10 +31,10 @@ public class Proizvod {
 		this.cijena = cijena;
 	}
 	public Date getIstekGarancije() {
-		return istekGarancije;
+		return garancija;
 	}
 	public void setIstekGarancije(Date istekGarancije) {
-		this.istekGarancije = istekGarancije;
+		this.garancija = istekGarancije;
 	}
 	public String getOpisProizvoda() {
 		return opisProizvoda;
