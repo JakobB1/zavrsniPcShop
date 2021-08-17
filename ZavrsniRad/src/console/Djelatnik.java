@@ -5,8 +5,7 @@ public class Djelatnik {
 	private int sifra;
 	private String ime;
 	private String prezime;
-	private String brojClanskeKartice;
-	private String email;
+	private String pcshop;
 	
 	public int getSifra() {
 		return sifra;
@@ -26,19 +25,12 @@ public class Djelatnik {
 	public void setPrezime(String prezime) {
 		this.prezime = prezime;
 	}
-	public String getBrojClanskeKartice() {
-		return brojClanskeKartice;
+	public String getPcshop() {
+		return pcshop;
 	}
-	public void setBrojClanskeKartice(String brojClanskeKartice) {
-		this.brojClanskeKartice = brojClanskeKartice;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setPcshop(String pcshop) {
+		this.pcshop = pcshop;
 	}
 	
 	
-
 }
