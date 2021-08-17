@@ -168,11 +168,21 @@ public class Start {
 	}
 
 	private void djelatnikBrisanje() {
-		
+		djelatnikStavke("Trenutno dostupno u aplikaciji");
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za brisanje: ", 
+				"Niste unijeli cijeli broj", 1, djelatnici.size());
+		djelatnici.remove(redniBroj-1);
+		djelatnikIzbornik();
 	}
 
 	private void djelatnikPromjena() {
-		
+		djelatnikStavke("Trenutno dostupno u aplikaciji");
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za promjenu: ", 
+				"Niste unijeli cijeli broj", 1, djelatnici.size());
+		Djelatnik djelatnikZaPromjenu = djelatnici.get(redniBroj-1);
+		djelatnikZaPromjenu = djelatnikPostaviVrijednosti(djelatnikZaPromjenu);
+		djelatnici.set(redniBroj-1, djelatnikZaPromjenu);
+		djelatnikIzbornik();
 	}
 
 	private void djelatnikUnosNovog() {
