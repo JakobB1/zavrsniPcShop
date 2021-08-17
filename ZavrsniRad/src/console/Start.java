@@ -10,11 +10,14 @@ public class Start {
 	private List<Korisnik> korisnici;
 	private List<Djelatnik> djelatnici;
 	private List<Racun> racuni;
+	private List<Proizvod> proizvodi;
 	
 	public Start() {
 		korisnici = new ArrayList<Korisnik>();
 		djelatnici = new ArrayList<Djelatnik>();
 		racuni = new ArrayList<Racun>();
+		proizvodi = new ArrayList<Proizvod>();
+		
 		Ulaz.scanner = new Scanner(System.in);
 		glavniIzbornik();
 	}
