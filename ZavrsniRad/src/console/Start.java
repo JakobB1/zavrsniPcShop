@@ -369,11 +369,21 @@ public class Start {
 	}
 
 	private void proizvodBrisanje() {
-		
+		proizvodStavke("Trenutno dostupno u aplikaciji");
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za brisanje: ", 
+				"Niste unijeli cijeli broj", 1, proizvodi.size());
+		proizvodi.remove(redniBroj-1);
+		proizvodIzbornik();
 	}
 
 	private void proizvodPromjena() {
-		
+		proizvodStavke("Trenutno dostupno u aplikaciji");
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za promjenu: ", 
+				"Niste unijeli cijeli broj", 1, proizvodi.size());
+		Proizvod proizvodZaPromjenu = proizvodi.get(redniBroj-1);
+		proizvodZaPromjenu = proizvodPostaviVrijednosti(proizvodZaPromjenu);
+		proizvodi.set(redniBroj-1, proizvodZaPromjenu);
+		proizvodIzbornik();
 	}
 
 	private void proizvodUnosNovog() {
@@ -425,6 +435,10 @@ public class Start {
 		}
 	}
 
+    ///////////
+    //// KRAJ PROIZVOD
+    ///////////
+	
 	public static void main(String[] args) {
 		new Start();
 	}
