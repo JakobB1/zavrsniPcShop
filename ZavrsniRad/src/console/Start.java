@@ -391,11 +391,10 @@ public class Start {
 		p.setCijena(Ulaz.ucitajDouble("Unesi cijenu: ", 
 				"Cijena mora biti decimalni broj", 0, 100000));
 		p.setGarancija(Ulaz.ucitajDatum("Unesi datum pocetka: "));
-		p.setOpisProizvoda(Ulaz.ucitajString("Unesite opis proizvoda", "Opis obavezan"));
+		p.setOpisProizvoda(Ulaz.ucitajString("Unesite opis proizvoda: ", "Opis obavezan"));
 		p.setDostupnostZaKupnju(Ulaz.ucitajBoolean("Unesite oznaku da li je " 
 		+ "proizvod certificiran: " , "Kriva vrijednost" ));
-		p.setKodArtikla(Ulaz.ucitajString("Unesite kod artikla", "Kod obavezan"));
-        //// nastavak
+		p.setKodArtikla(Ulaz.ucitajString("Unesite kod artikla: ", "Kod obavezan"));
 		return p;
 	}
 
