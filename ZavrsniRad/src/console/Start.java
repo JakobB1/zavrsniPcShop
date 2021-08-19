@@ -387,14 +387,17 @@ public class Start {
 		p.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
     			"Sifra mora biti cijeli broj",
     			1, Integer.MAX_VALUE));
-		p.setNaziv(Ulaz.ucitajString("Unesite naziv :", "Naziv obavezan"));
+		p.setNaziv(Ulaz.ucitajString("Unesite naziv :", 
+				"Naziv obavezan"));
 		p.setCijena(Ulaz.ucitajDouble("Unesi cijenu: ", 
 				"Cijena mora biti decimalni broj", 0, 100000));
 		p.setGarancija(Ulaz.ucitajDatum("Unesi datum pocetka: "));
-		p.setOpisProizvoda(Ulaz.ucitajString("Unesite opis proizvoda: ", "Opis obavezan"));
+		p.setOpisProizvoda(Ulaz.ucitajString("Unesite opis proizvoda: ",
+				"Opis obavezan"));
 		p.setDostupnostZaKupnju(Ulaz.ucitajBoolean("Unesite oznaku da li je " 
-		+ "proizvod certificiran: " , "Kriva vrijednost" ));
-		p.setKodArtikla(Ulaz.ucitajString("Unesite kod artikla: ", "Kod obavezan"));
+				+ "proizvod certificiran: " , "Kriva vrijednost" ));
+		p.setKodArtikla(Ulaz.ucitajString("Unesite kod artikla: ", 
+				"Kod obavezan"));
 		return p;
 	}
 
