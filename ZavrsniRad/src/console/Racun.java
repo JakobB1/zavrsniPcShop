@@ -11,6 +11,9 @@ public class Racun {
 	private int kolicina;
 	private double cijena;
 	private double iznosracuna;
+	private Date datumkupnje;
+	private String nacinplacanja;
+	private String nazivproizvoda;
 	
 	public double getIznosracuna() {
 		return iznosracuna;
@@ -18,10 +21,6 @@ public class Racun {
 	public void setIznosracuna(double iznosracuna) {
 		this.iznosracuna = iznosracuna;
 	}
-	private Date datumkupnje;
-	private String nacinplacanja;
-	private String nazivproizvoda;
-	
 	public String getNazivproizvoda() {
 		return nazivproizvoda;
 	}

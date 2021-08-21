@@ -3,9 +3,9 @@ package console;
 public class Korisnik {
 	
 	private int sifra;
+	private int brojClanskeKartice;
 	private String ime;
 	private String prezime;
-	private int brojClanskeKartice;
 	private String email;
 	
 	public int getSifra() {

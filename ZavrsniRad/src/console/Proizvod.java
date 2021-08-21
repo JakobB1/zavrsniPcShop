@@ -5,13 +5,14 @@ import java.util.Date;
 public class Proizvod {
 	
 	private int sifra;
-	private String naziv;
 	private double cijena;
 	private Date garancija;
-	private boolean certifikat;
+	private String naziv;
 	private String opisProizvoda;
-	private boolean dostupnostZaKupnju;
 	private String kodArtikla;
+	private boolean certifikat;
+	private boolean dostupnostZaKupnju;
+	
 	
 	public int getSifra() {
 		return sifra;
