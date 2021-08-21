@@ -307,7 +307,7 @@ public class Start {
 		r.setCijena(Ulaz.ucitajDouble("Unesi cijenu: ", 
 				"Cijena mora biti decimalni broj", 0, 100000));
 		r.setKolicina(Ulaz.ucitajInt("Unesite kolicinu: ", "Unos mora biti cijeli broj", 1, 99));
-    	r.setDatumpocetka(Ulaz.ucitajDatum("Unesi datum kupnje: "));
+		r.setDatumpocetka(Ulaz.ucitajDatum("Unesi datum kupnje: "));
     	r.setDatumpocetka(Ulaz.ucitajDatum("Unesi datum trajanja garancije: "));
     	r.setNacinplacanja(Ulaz.ucitajString("Unesite nacin placanja: ", 
 				"Nacin placanja obavezan"));
