@@ -302,14 +302,16 @@ public class Start {
 		r.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
     			"Sifra mora biti cijeli broj",
     			1, Integer.MAX_VALUE));
-		r.setBrojracuna(Ulaz.ucitajString("Unesi broj racuna :",
-				"Broj racuna obavezan"));
+		r.setBrojracuna(Ulaz.ucitajInt("Unesi broj racuna :",
+				"Niste unijeli cijeli broj", 1, 10000));
 		r.setCijena(Ulaz.ucitajDouble("Unesi cijenu: ", 
 				"Cijena mora biti decimalni broj", 0, 100000));
-    	r.setDatumpocetka(Ulaz.ucitajDatum("Unesi datum pocetka: "));
-    	r.setCertifikat(Ulaz.ucitajBoolean("Unesite oznaku da li je " 
-    			+ "smjer certification: ", "Kriva vrijednost"));
-
+		r.setKolicina(Ulaz.ucitajInt("Unesite kolicinu: ", "Unos mora biti cijeli broj", 1, 99));
+    	r.setDatumpocetka(Ulaz.ucitajDatum("Unesi datum kupnje: "));
+    	r.setDatumpocetka(Ulaz.ucitajDatum("Unesi datum trajanja garancije: "));
+    	r.setNacinplacanja(Ulaz.ucitajString("Unesite nacin placanja: ", 
+				"Nacin placanja obavezan"));
+    	
 		return r;
 	}
 
@@ -329,8 +331,9 @@ public class Start {
 				r= racuni.get(i);
 				System.out.println((i + 1) + ". " + r.getBrojracuna() + 
 						" " + r.getCijena() + 
+						" " + r.getKolicina() + 
 						" " + r.getDatumpocetka() + 
-						" " + r.isCertifikat());
+						" " + r.getNacinplacanja());
 			}	
 		}
 	}
@@ -401,13 +404,15 @@ public class Start {
 				"Naziv obavezan"));
 		p.setCijena(Ulaz.ucitajDouble("Unesi cijenu: ", 
 				"Cijena mora biti decimalni broj", 0, 100000));
-		p.setGarancija(Ulaz.ucitajDatum("Unesi datum pocetka: "));
 		p.setOpisProizvoda(Ulaz.ucitajString("Unesite opis proizvoda: ",
 				"Opis obavezan"));
-		p.setDostupnostZaKupnju(Ulaz.ucitajBoolean("Unesite oznaku da li je " 
-				+ "proizvod certificiran: " , "Kriva vrijednost" ));
 		p.setKodArtikla(Ulaz.ucitajString("Unesite kod artikla: ", 
 				"Kod obavezan"));
+		p.setDostupnostZaKupnju(Ulaz.ucitajBoolean("Unesite oznaku da li je " 
+				+ "proizvod dostupan: " , "Kriva vrijednost" ));
+		p.setCertifikat(Ulaz.ucitajBoolean("Unesite oznaku da li je " 
+    			+ "proizvod cartificiran: ", "Kriva vrijednost"));
+		p.setGarancija(Ulaz.ucitajDatum("Unesi datum trajanja garancije: "));
 		return p;
 	}
 
@@ -425,12 +430,13 @@ public class Start {
 			Proizvod p;
 			for(int i=0;i<proizvodi.size();i++) {
 				p= proizvodi.get(i);
-				System.out.println((i + 1) + ". " + p.getCijena() + 
-						" " + p.getGarancija() +
-						" " + p.getNaziv() + 
+				System.out.println((i + 1) + ". " + p.getNaziv() + 
+						" " + p.getCijena() +
+						" " + p.getOpisProizvoda() + 
 						" " + p.getKodArtikla() + 
-						" " + p.getKodArtikla() + 
-						" " + p.getOpisProizvoda());
+						" " + p.isDostupnostZaKupnju() + 
+						" " + p.isCertifikat() + 
+						" " + p.getGarancija());
 			}	
 		}
 	}

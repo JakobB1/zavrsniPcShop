@@ -93,7 +93,8 @@ public class Ulaz {
 		}
 	}
 	
-public static final String FORMAT_DATUM="dd.MM.yyyy.";
+	
+	public static final String FORMAT_DATUM="dd.MM.yyyy.";
 	
 	public static Date ucitajDatum(String poruka) {
 		SimpleDateFormat df = new SimpleDateFormat(FORMAT_DATUM);

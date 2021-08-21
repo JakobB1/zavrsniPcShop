@@ -7,10 +7,36 @@ import java.util.List;
 public class Racun {
 	
 	private int sifra;
-	private Date datumpocetka;
-	private String brojracuna;
+	private int brojracuna;
+	private int kolicina;
 	private double cijena;
-	private boolean certifikat;
+	private Date datumkupnje;
+	private String nacinplacanja;
+	
+	public int getBrojracuna() {
+		return brojracuna;
+	}
+	public void setBrojracuna(int brojracuna) {
+		this.brojracuna = brojracuna;
+	}
+	public String getNacinplacanja() {
+		return nacinplacanja;
+	}
+	public void setNacinplacanja(String nacinplacanja) {
+		this.nacinplacanja = nacinplacanja;
+	}
+	public Date getDatumkupnje() {
+		return datumkupnje;
+	}
+	public void setDatumkupnje(Date datumkupnje) {
+		this.datumkupnje = datumkupnje;
+	}
+	public int getKolicina() {
+		return kolicina;
+	}
+	public void setKolicina(int kolicina) {
+		this.kolicina = kolicina;
+	}
 	private List<Korisnik> korisnici = new ArrayList<Korisnik>();
 	private List<Djelatnik> djelatnici = new ArrayList<Djelatnik>();
 	
@@ -21,28 +47,17 @@ public class Racun {
 		this.sifra = sifra;
 	}
 	public Date getDatumpocetka() {
-		return datumpocetka;
+		return datumkupnje;
 	}
 	public void setDatumpocetka(Date datumpocetka) {
-		this.datumpocetka = datumpocetka;
+		this.datumkupnje = datumpocetka;
 	}
-	public String getBrojracuna() {
-		return brojracuna;
-	}
-	public void setBrojracuna(String brojracuna) {
-		this.brojracuna = brojracuna;
-	}
+	
 	public double getCijena() {
 		return cijena;
 	}
 	public void setCijena(double cijena) {
 		this.cijena = cijena;
-	}
-	public boolean isCertifikat() {
-		return certifikat;
-	}
-	public void setCertifikat(boolean certifikat) {
-		this.certifikat = certifikat;
 	}
 	public List<Korisnik> getKorisnici() {
 		return korisnici;

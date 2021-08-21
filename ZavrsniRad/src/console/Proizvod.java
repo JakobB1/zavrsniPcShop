@@ -8,6 +8,7 @@ public class Proizvod {
 	private String naziv;
 	private double cijena;
 	private Date garancija;
+	private boolean certifikat;
 	private String opisProizvoda;
 	private boolean dostupnostZaKupnju;
 	private String kodArtikla;
@@ -36,6 +37,12 @@ public class Proizvod {
 	public void setGarancija(Date garancija) {
 		this.garancija = garancija;
 	}
+	public boolean isCertifikat() {
+		return certifikat;
+	}
+	public void setCertifikat(boolean certifikat) {
+		this.certifikat = certifikat;
+	}
 	public String getOpisProizvoda() {
 		return opisProizvoda;
 	}
@@ -54,5 +61,7 @@ public class Proizvod {
 	public void setKodArtikla(String kodArtikla) {
 		this.kodArtikla = kodArtikla;
 	}
+	
+	
 
 }
