@@ -304,6 +304,7 @@ public class Start {
     			1, Integer.MAX_VALUE));
 		r.setBrojracuna(Ulaz.ucitajInt("Unesi broj racuna :",
 				"Niste unijeli cijeli broj", 1, 10000));
+		r.setNazivproizvoda(Ulaz.ucitajString("Unesite naziv proizvoda: ", "Naziv proizvoda obavezan"));
 		r.setCijena(Ulaz.ucitajDouble("Unesi cijenu: ", 
 				"Cijena mora biti decimalni broj", 0, 100000));
 		r.setKolicina(Ulaz.ucitajInt("Unesite kolicinu: ", "Unos mora biti cijeli broj", 1, 99));
@@ -311,6 +312,7 @@ public class Start {
     	r.setDatumpocetka(Ulaz.ucitajDatum("Unesi datum trajanja garancije: "));
     	r.setNacinplacanja(Ulaz.ucitajString("Unesite nacin placanja: ", 
 				"Nacin placanja obavezan"));
+    	r.setIznosracuna(Ulaz.ucitajDouble("Iznos racuna: ", "Iznos obavezan", 0, 100000));
     	
 		return r;
 	}
@@ -330,10 +332,13 @@ public class Start {
 			for(int i=0;i<racuni.size();i++) {
 				r= racuni.get(i);
 				System.out.println((i + 1) + ". " + r.getBrojracuna() + 
-						" " + r.getCijena() + 
-						" " + r.getKolicina() + 
-						" " + r.getDatumpocetka() + 
-						" " + r.getNacinplacanja());
+						" Naziv: " + r.getNazivproizvoda() + 
+						" Cijena: " + r.getCijena() + 
+						" Kolicina " + r.getKolicina() + 
+						" Datum kupnje " + r.getDatumpocetka() + 
+						" Datum garancije " + r.getDatumpocetka() + 
+						" Nacin placanja: " + r.getNacinplacanja() + 
+						" Iznos: " + r.getIznosracuna());
 			}	
 		}
 	}

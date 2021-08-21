@@ -10,9 +10,24 @@ public class Racun {
 	private int brojracuna;
 	private int kolicina;
 	private double cijena;
+	private double iznosracuna;
+	
+	public double getIznosracuna() {
+		return iznosracuna;
+	}
+	public void setIznosracuna(double iznosracuna) {
+		this.iznosracuna = iznosracuna;
+	}
 	private Date datumkupnje;
 	private String nacinplacanja;
+	private String nazivproizvoda;
 	
+	public String getNazivproizvoda() {
+		return nazivproizvoda;
+	}
+	public void setNazivproizvoda(String nazivproizvoda) {
+		this.nazivproizvoda = nazivproizvoda;
+	}
 	public int getBrojracuna() {
 		return brojracuna;
 	}
