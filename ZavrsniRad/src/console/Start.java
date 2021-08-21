@@ -334,9 +334,9 @@ public class Start {
 				System.out.println((i + 1) + ". " + r.getBrojracuna() + 
 						" Naziv: " + r.getNazivproizvoda() + 
 						" Cijena: " + r.getCijena() + 
-						" Kolicina " + r.getKolicina() + 
-						" Datum kupnje " + r.getDatumpocetka() + 
-						" Datum garancije " + r.getDatumpocetka() + 
+						" Kolicina: " + r.getKolicina() + 
+						" Datum kupnje: " + r.getDatumpocetka() + 
+						" Datum garancije: " + r.getDatumpocetka() + 
 						" Nacin placanja: " + r.getNacinplacanja() + 
 						" Iznos: " + r.getIznosracuna());
 			}	
