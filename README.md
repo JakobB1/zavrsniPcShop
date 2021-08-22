@@ -1,12 +1,10 @@
 # PcShop
 Ljetni završni rad za JP24 Edunova
 
-Realizirane točke: - Pokretanje konzolne aplikacije u CMD-u
+Realizirane točke: * Eclipse 
 
-                   - Navigiranje po glavnom izborniku ( 5 komandi )
-                   - Navigiranje po podizbornicima (Korisnici, Djelatnici, Racuni, Proivodi, Izlaz)
-                   
-                   - private List komande
+                   - List komande
+                   - Glavni izbornik komande
                    - Komanda za ucitavanje glavne akcije
                    
                    - Izbornik za korisnika
@@ -17,3 +15,30 @@ Realizirane točke: - Pokretanje konzolne aplikacije u CMD-u
                    - Postavljanje vrijednosti korisnika
                    - Pregled korisnika
                    - Stavke korisnika
+                   
+                   - Izbornik za djelatnika
+                   - Ucitavanje akcije za djelatnika
+                   - Brisanje djelatnika
+                   - Promjena djelatnika
+                   - Unos novog djelatnika
+                   - Postavljanje vrijednosti djelatnika
+                   - Pregled djelatnika
+                   - Stavke djelatnika
+                   
+                   - Izbornik za racune
+                   - Ucitavanje akcije za racun
+                   - Brisanje racuna
+                   - Promjena racuna
+                   - Unos novog racuna
+                   - Postavljanje vrijednosti racuna
+                   - Pregled racuna
+                   - Stavke racuna
+                   
+                   - Izbornik za proizvode
+                   - Ucitavanje akcije za proizvode
+                   - Brisanje proizvoda
+                   - Promjena proizvoda
+                   - Unos novog proizvoda
+                   - Postavljanje vrijednosti proizvoda
+                   - Pregled proizvoda
+                   - Stavke proizvoda
