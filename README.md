@@ -62,7 +62,7 @@ Realizirane točke:
 
 * Konzolna aplikacija
 
-                  - Navigiranje kroz glavni izbornik             * 1. Korisnici
+                  - Navigiranje kroz glavni izbornik:            * 1. Korisnici
                                                                  * 2. Djelatnici
                                                                  * 3. Racuni
                                                                  * 4. Proizvodi
