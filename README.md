@@ -3,6 +3,7 @@ Ljetni završni rad za JP24 Edunova
 
 Realizirane točke: * Eclipse 
 
+                   START
                    - List komande
                    - Glavni izbornik komande
                    - Komanda za ucitavanje glavne akcije
