@@ -62,35 +62,36 @@ Realizirane točke:
 
 * Konzolna aplikacija
 
-                  - Navigiranje kroz glavni izbornik * 1. Korisnici
-                                                     * 2. Djelatnici
-                                                     * 3. Racuni
-                                                     * 4. Proizvodi
-                                                     * 5. Izlaz iz programa
+                  - Navigiranje kroz glavni izbornik             * 1. Korisnici
+                                                                 * 2. Djelatnici
+                                                                 * 3. Racuni
+                                                                 * 4. Proizvodi
+                                                                 * 5. Izlaz iz programa
                   
-                  - Navigiranje po podizbornicima: 1. Korisnici * pregled unesenih 
-                                                                * dodavanje novog
-                                                                * promjena postojeceg 
-                                                                * brisanje
-                                                                * povratak u prethodni izbornik
+                  
+                  - Navigiranje po podizbornicima: 1. Korisnici  * Pregled unesenih 
+                                                                 * Dodavanje novog
+                                                                 * Promjena postojeceg 
+                                                                 * Brisanje
+                                                                 * Povratak u prethodni izbornik
                                                                 
-                                                   2. Djelatnici * pregled unesenih 
-                                                                 * dodavanje novog
-                                                                 * promjena postojeceg 
-                                                                 * brisanje
-                                                                 * povratak u prethodni izbornik
+                                                   2. Djelatnici * Pregled unesenih 
+                                                                 * Dodavanje novog
+                                                                 * Promjena postojeceg 
+                                                                 * Brisanje
+                                                                 * Povratak u prethodni izbornik
                                                                  
-                                                   3. Racuni     * pregled unesenih 
-                                                                 * dodavanje novog
-                                                                 * promjena postojeceg 
-                                                                 * brisanje
-                                                                 * povratak u prethodni izbornik
+                                                   3. Racuni     * Pregled unesenih 
+                                                                 * Dodavanje novog
+                                                                 * Promjena postojeceg 
+                                                                 * Brisanje
+                                                                 * Povratak u prethodni izbornik
                                                                 
-                                                   4. Proizvodi  * pregled unesenih 
-                                                                 * dodavanje novog
-                                                                 * promjena postojeceg 
-                                                                 * brisanje
-                                                                 * povratak u prethodni izbornik
+                                                   4. Proizvodi  * Pregled unesenih 
+                                                                 * Dodavanje novog
+                                                                 * Promjena postojeceg 
+                                                                 * Brisanje
+                                                                 * Povratak u prethodni izbornik
                                                    
                                                    
                   - Korisnci unos:       * Sifra
