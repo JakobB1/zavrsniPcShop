@@ -127,3 +127,5 @@ Realizirane točke:
                                          * Dostupnost 
                                          * Certifikat garancije 
                                          * Trajanje garancije
+
+                 * Program javlja greske ako je unos netocan
