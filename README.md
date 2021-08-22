@@ -4,6 +4,7 @@ Ljetni završni rad za JP24 Edunova
 Realizirane točke: * Eclipse 
 
                    START
+                   
                    - List komande
                    - Glavni izbornik komande
                    - Komanda za ucitavanje glavne akcije
@@ -44,3 +45,15 @@ Realizirane točke: * Eclipse
                    - Pregled proizvoda
                    - Stavke proizvoda
                    
+                   ULAZ
+                   
+                   - Ucitavanje Scannera
+                   - Ucitavanje Stringa
+                   - Ucitavanje Doublea
+                   - Ucitavanje Booleana
+                   - Ucitavanje Datuma
+                   
+                   KORISNIK, DJELATNIK, RACUN, PROIZVOD
+                   
+                   - Postavljanje vrijednosti
+                   - Generiranje Gettera & Settera
