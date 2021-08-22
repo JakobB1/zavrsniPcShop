@@ -69,6 +69,7 @@ Realizirane točke:
                                                                  * 5. Izlaz iz programa
                   
                   
+                  
                   - Navigiranje po podizbornicima: 1. Korisnici  * Pregled unesenih 
                                                                  * Dodavanje novog
                                                                  * Promjena postojeceg 
@@ -93,7 +94,8 @@ Realizirane točke:
                                                                  * Brisanje
                                                                  * Povratak u prethodni izbornik
                                                    
-                                                   
+                                       
+                                       
                   - Korisnci unos:       * Sifra
                                          * Ime 
                                          * Prezime 
