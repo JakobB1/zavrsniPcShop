@@ -1,2 +1,2 @@
-# zavrsniPcShop
-Završni rad - ljeto
+# PcShop
+Ljetni završni rad za JP24
