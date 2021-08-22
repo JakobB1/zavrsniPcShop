@@ -43,3 +43,4 @@ Realizirane točke: * Eclipse
                    - Postavljanje vrijednosti proizvoda
                    - Pregled proizvoda
                    - Stavke proizvoda
+                   
