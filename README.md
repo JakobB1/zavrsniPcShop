@@ -1,6 +1,9 @@
 # PcShop
 Ljetni završni rad za JP24 Edunova
 
+Konzolna aplikacija CRUD unosa, realizirane točke odvojene na * Ecplipe komande
+                                                              * Console App koristenje i mogucnosti
+
 Realizirane točke: 
 * Eclipse 
 
