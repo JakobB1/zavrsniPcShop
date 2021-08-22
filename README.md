@@ -128,4 +128,4 @@ Realizirane točke:
                                          * Certifikat garancije 
                                          * Trajanje garancije
 
-                 * Program javlja greske ako je unos netocan
+* Program javlja greske ako  je unos netocan
