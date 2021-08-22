@@ -102,9 +102,9 @@ Realizirane točke:
                                          * Email 
                                          * Broj clanske kartice
                                          
-                  - Djelatnici unos:     * Sifra, 
-                                         * Ime, 
-                                         * Prezime, 
+                  - Djelatnici unos:     * Sifra 
+                                         * Ime
+                                         * Prezime
                                          * Ime PC shopa
 
                   - Racuni unos:         * Sifra
