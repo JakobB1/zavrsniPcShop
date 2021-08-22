@@ -62,7 +62,12 @@ Realizirane točke:
 
 * Konzolna aplikacija
 
-                  - Navigiranje kroz glavni izbornik (1. Korisnici, 2. Djelatnici, 3. Racuni, 4. Proizvodi, 5. Izlaz iz programa)
+                  - Navigiranje kroz glavni izbornik * 1. Korisnici, 
+                                                     * 2. Djelatnici, 
+                                                     * 3. Racuni, 
+                                                     * 4. Proizvodi, 
+                                                     * 5. Izlaz iz programa)
+                  
                   - Navigiranje po podizbornicima: - 1. Korisnici (Pregled unesenih, dodavanje novog, promjena postojeceg, brisanje, povratak u prethodni izbornik)
                                                    - 2. Djelatnici (Pregled unesenih, dodavanje novog, promjena postojeceg, brisanje, povratak u prethodni izbornik)
                                                    - 3. Racuni (Pregled unesenih, dodavanje novog, promjena postojeceg, brisanje, povratak u prethodni izbornik)
