@@ -78,17 +78,20 @@ Realizirane točke:
                                                                  * Brisanje
                                                                  * Povratak u prethodni izbornik
                                                                 
+                                                                
                                                    2. Djelatnici * Pregled unesenih 
                                                                  * Dodavanje novog
                                                                  * Promjena postojeceg 
                                                                  * Brisanje
                                                                  * Povratak u prethodni izbornik
                                                                  
+                                                                 
                                                    3. Racuni     * Pregled unesenih 
                                                                  * Dodavanje novog
                                                                  * Promjena postojeceg 
                                                                  * Brisanje
                                                                  * Povratak u prethodni izbornik
+                                                                
                                                                 
                                                    4. Proizvodi  * Pregled unesenih 
                                                                  * Dodavanje novog
@@ -104,10 +107,12 @@ Realizirane točke:
                                          * Email 
                                          * Broj clanske kartice
                                          
+                                         
                   - Djelatnici unos:     * Sifra 
                                          * Ime
                                          * Prezime
                                          * Ime PC shopa
+
 
                   - Racuni unos:         * Sifra
                                          * Broj racuna
@@ -118,6 +123,7 @@ Realizirane točke:
                                          * Datum garancije 
                                          * Nacina placanja 
                                          * Iznos
+                                         
                                          
                   - Proizvodi unos:      * Sifra 
                                          * Naziv 
