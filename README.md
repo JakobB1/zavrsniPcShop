@@ -62,11 +62,11 @@ Realizirane točke:
 
 * Konzolna aplikacija
 
-                  - Navigiranje kroz glavni izbornik * 1. Korisnici, 
-                                                     * 2. Djelatnici, 
-                                                     * 3. Racuni, 
-                                                     * 4. Proizvodi, 
-                                                     * 5. Izlaz iz programa)
+                  - Navigiranje kroz glavni izbornik * 1. Korisnici
+                                                     * 2. Djelatnici
+                                                     * 3. Racuni
+                                                     * 4. Proizvodi
+                                                     * 5. Izlaz iz programa
                   
                   - Navigiranje po podizbornicima: 1. Korisnici * pregled unesenih 
                                                                 * dodavanje novog
@@ -92,8 +92,33 @@ Realizirane točke:
                                                                  * brisanje
                                                                  * povratak u prethodni izbornik
                                                    
-                  - Korisnci mogući unos (Sifra, ime, prezime, email, broj clanske kartice)
-                  - Djelatnici mogući unos (Sifra, ime, prezime, ime PC shopa
-                  - )
-                  - Racuni mogući unos (Sifra, broj racuna, naziv proizvoda, cijena, kolicina, datuma kupnje, datum garancije, nacina placanja, iznos)
-                  - Proizvodi mogući unos (Sifra, naziv, cijena, opis, kod, dostupnost, certifikat garancije, trajanje garancije)
+                                                   
+                  - Korisnci unos:       * Sifra
+                                         * Ime 
+                                         * Prezime 
+                                         * Email 
+                                         * Broj clanske kartice
+                                         
+                  - Djelatnici unos:     * Sifra, 
+                                         * Ime, 
+                                         * Prezime, 
+                                         * Ime PC shopa
+
+                  - Racuni unos:         * Sifra
+                                         * Broj racuna
+                                         * Naziv proizvoda 
+                                         * Cijena
+                                         * Kolicina
+                                         * Datuma kupnje
+                                         * Datum garancije 
+                                         * Nacina placanja 
+                                         * Iznos
+                                         
+                  - Proizvodi unos:      * Sifra 
+                                         * Naziv 
+                                         * Cijena 
+                                         * Opis
+                                         * Kod 
+                                         * Dostupnost 
+                                         * Certifikat garancije 
+                                         * Trajanje garancije
