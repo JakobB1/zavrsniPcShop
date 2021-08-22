@@ -1,4 +1,4 @@
-package console;
+package brkicljetnizadatak;
 
 import java.util.Date;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package console;
+package brkicljetnizadatak;
 
 public class Djelatnik {
 	
