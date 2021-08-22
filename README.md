@@ -1,7 +1,8 @@
 # PcShop
 Ljetni završni rad za JP24 Edunova
 
-Realizirane točke: * Eclipse 
+Realizirane točke: 
+* Eclipse 
 
                    START
                    
@@ -57,3 +58,6 @@ Realizirane točke: * Eclipse
                    
                    - Postavljanje vrijednosti
                    - Generiranje Gettera & Settera
+
+
+* Konzolna aplikacija
