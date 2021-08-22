@@ -80,8 +80,17 @@ Realizirane točke:
                                                                  * brisanje
                                                                  * povratak u prethodni izbornik
                                                                  
-                                                   3. Racuni (Pregled unesenih, dodavanje novog, promjena postojeceg, brisanje, povratak u prethodni izbornik)
-                                                   4. Proizvodi (Pregled unesenih, dodavanje novog, promjena postojeceg, brisanje, povratak u prethodni izbornik)
+                                                   3. Racuni     * pregled unesenih 
+                                                                 * dodavanje novog
+                                                                 * promjena postojeceg 
+                                                                 * brisanje
+                                                                 * povratak u prethodni izbornik
+                                                                
+                                                   4. Proizvodi  * pregled unesenih 
+                                                                 * dodavanje novog
+                                                                 * promjena postojeceg 
+                                                                 * brisanje
+                                                                 * povratak u prethodni izbornik
                                                    
                   - Korisnci mogući unos (Sifra, ime, prezime, email, broj clanske kartice)
                   - Djelatnici mogući unos (Sifra, ime, prezime, ime PC shopa
