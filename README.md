@@ -61,3 +61,15 @@ Realizirane točke:
 
 
 * Konzolna aplikacija
+
+                  - Navigiranje kroz glavni izbornik (1. Korisnici, 2. Djelatnici, 3. Racuni, 4. Proizvodi, 5. Izlaz iz programa)
+                  - Navigiranje po podizbornicima: - 1. Korisnici (Pregled unesenih, dodavanje novog, promjena postojeceg, brisanje, povratak u prethodni izbornik)
+                                                   - 2. Djelatnici (Pregled unesenih, dodavanje novog, promjena postojeceg, brisanje, povratak u prethodni izbornik)
+                                                   - 3. Racuni (Pregled unesenih, dodavanje novog, promjena postojeceg, brisanje, povratak u prethodni izbornik)
+                                                   - 4. Proizvodi (Pregled unesenih, dodavanje novog, promjena postojeceg, brisanje, povratak u prethodni izbornik)
+                                                   
+                  - Korisnci mogući unos (Sifra, ime, prezime, email, broj clanske kartice)
+                  - Djelatnici mogući unos (Sifra, ime, prezime, ime PC shopa
+                  - )
+                  - Racuni mogući unos (Sifra, broj racuna, naziv proizvoda, cijena, kolicina, datuma kupnje, datum garancije, nacina placanja, iznos)
+                  - Proizvodi mogući unos (Sifra, naziv, cijena, opis, kod, dostupnost, certifikat garancije, trajanje garancije)
