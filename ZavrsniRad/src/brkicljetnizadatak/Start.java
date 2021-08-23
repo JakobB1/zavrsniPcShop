@@ -416,7 +416,7 @@ public class Start {
 		p.setDostupnostZaKupnju(Ulaz.ucitajBoolean("Unesite oznaku da li je " 
 				+ "proizvod dostupan: " , "Kriva vrijednost" ));
 		p.setCertifikat(Ulaz.ucitajBoolean("Unesite oznaku da li je " 
-    			+ "proizvod cartificiran: ", "Kriva vrijednost"));
+    			+ "proizvod certificiran: ", "Kriva vrijednost"));
 		p.setGarancija(Ulaz.ucitajDatum("Unesi datum trajanja garancije: "));
 		return p;
 	}
