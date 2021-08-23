@@ -4,24 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class Start {
-	
+
 	private List<Korisnik> korisnici;
 	private List<Djelatnik> djelatnici;
 	private List<Racun> racuni;
 	private List<Proizvod> proizvodi;
-	
+
 	public Start() {
 		korisnici = new ArrayList<Korisnik>();
 		djelatnici = new ArrayList<Djelatnik>();
 		racuni = new ArrayList<Racun>();
 		proizvodi = new ArrayList<Proizvod>();
-		
+
 		Ulaz.scanner = new Scanner(System.in);
 		glavniIzbornik();
 	}
-	
+
 	private void glavniIzbornik() {
 		System.out.println("**** PC SHOP ****");
 		System.out.println(" IZBORNIK ");
@@ -30,7 +29,7 @@ public class Start {
 		System.out.println(" 3. Racuni");
 		System.out.println(" 4. Proizvodi");
 		System.out.println(" 5. Izlaz iz programa");
-		
+
 		ucitajGlavnuAkciju();
 	}
 
@@ -39,13 +38,13 @@ public class Start {
 		case 1:
 			korisnikIzbornik();
 			break;
-		case 2: 
+		case 2:
 			djelatnikIzbornik();
 			break;
-		case 3: 
+		case 3:
 			racunIzbornik();
 			break;
-		case 4: 
+		case 4:
 			proizvodIzbornik();
 			break;
 		case 5:
@@ -53,29 +52,26 @@ public class Start {
 			return;
 		}
 	}
-	
-	
-	
-    ///////////
-    //// POCETAK KORISNIK
-    ///////////
+
+	///////////
+	//// POCETAK KORISNIK
+	///////////
 
 	private void korisnikIzbornik() {
-		System.out.println("--------------------");	
-		System.out.println("Podizbornik 1. Korisnici");		
+		System.out.println("--------------------");
+		System.out.println("Podizbornik 1. Korisnici");
 		System.out.println("Odaberite akciju");
 		System.out.println(" 1. Pregled unesenih korisnika");
 		System.out.println(" 2. Unos novog korisnika");
 		System.out.println(" 3. Promjena postojeceg korisnika");
 		System.out.println(" 4. Brisanje korisnika");
 		System.out.println(" 5. Povratak u prethodni izbornik");
-		
+
 		korisnikUcitajAkciju();
 	}
 
 	private void korisnikUcitajAkciju() {
-		switch(Ulaz.ucitajInt("Odaberite akciju: ",
-				"Niste unijeli cijeli broj", 1, 5)) {
+		switch (Ulaz.ucitajInt("Odaberite akciju: ", "Niste unijeli cijeli broj", 1, 5)) {
 		case 1 -> korinsikPregled();
 		case 2 -> korisnikUnosNovog();
 		case 3 -> korisnikPromjena();
@@ -86,19 +82,19 @@ public class Start {
 
 	private void korisnikBrisanje() {
 		korisnikStravke("Trenutno dostupno u aplikaciji");
-		int redniBroj  = Ulaz.ucitajInt("Odaberite redni broj za brisanje: ", 
-				"Niste unijeli cijeli broj", 1, korisnici.size());
-		korisnici.remove(redniBroj-1);
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za brisanje: ", "Niste unijeli cijeli broj", 1,
+				korisnici.size());
+		korisnici.remove(redniBroj - 1);
 		korisnikIzbornik();
 	}
 
 	private void korisnikPromjena() {
 		korisnikStravke("Trenutno dostupno u aplikaciji");
-		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za promjenu: ",
-				"Niste unijeli cijeli broj", 1, korisnici.size());
-		Korisnik korisnikZaPromjenu = korisnici.get(redniBroj-1);
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za promjenu: ", "Niste unijeli cijeli broj", 1,
+				korisnici.size());
+		Korisnik korisnikZaPromjenu = korisnici.get(redniBroj - 1);
 		korisnikZaPromjenu = korisnikPostaviVrijednosti(korisnikZaPromjenu);
-		korisnici.set(redniBroj-1, korisnikZaPromjenu);
+		korisnici.set(redniBroj - 1, korisnikZaPromjenu);
 		korisnikIzbornik();
 	}
 
@@ -110,15 +106,10 @@ public class Start {
 	}
 
 	private Korisnik korisnikPostaviVrijednosti(Korisnik k) {
-		k.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
-				"Sifra mora biti cijeli broj",
-				1, Integer.MAX_VALUE));
-		k.setIme(Ulaz.ucitajString("Unesite ime korisnika: ",
-				"Ime obavezno"));
-		k.setPrezime(Ulaz.ucitajString("Unesi prezime korisnika: ",
-				"Prezime obavezno"));
-		k.setEmail(Ulaz.ucitajString("Unesi email korisnika: ",
-				"Email obavezan"));
+		k.setSifra(Ulaz.ucitajInt("Unesite sifru: ", "Sifra mora biti cijeli broj", 1, Integer.MAX_VALUE));
+		k.setIme(Ulaz.ucitajString("Unesite ime korisnika: ", "Ime obavezno"));
+		k.setPrezime(Ulaz.ucitajString("Unesi prezime korisnika: ", "Prezime obavezno"));
+		k.setEmail(Ulaz.ucitajString("Unesi email korisnika: ", "Email obavezan"));
 		k.setBrojClanskeKartice(Ulaz.ucitajInt("Unesi broj clanske kartice korisnika: ",
 				"Broj kartice obavezan, mora biti cijeli broj", 1, 9999));
 		return k;
@@ -132,34 +123,30 @@ public class Start {
 	private void korisnikStravke(String naslov) {
 		System.out.println(naslov);
 		System.out.println("--------------------");
-		if(korisnici.size()==0) {
+		if (korisnici.size() == 0) {
 			System.out.println("Nema unesenih korisnika");
-		}else {
+		} else {
 			Korisnik k;
-			for(int i=0;i<korisnici.size();i++) {
+			for (int i = 0; i < korisnici.size(); i++) {
 				k = korisnici.get(i);
-				System.out.println((i + 1) + ". " + k.getIme() +
-						" " + k.getPrezime() +
-						" " + k.getEmail() + 
-						" " + k.getBrojClanskeKartice());
+				System.out.println((i + 1) + ". " + k.getIme() + " " + k.getPrezime() + " " + k.getEmail() + " "
+						+ k.getBrojClanskeKartice());
 			}
 		}
-		
+
 	}
-	
-    ///////////
-    //// KRAJ KORISNIK
-    ///////////
-	
-	
-	
-    ///////////
-    //// POCETAK DJELATNIK
-    ///////////
-	
+
+	///////////
+	//// KRAJ KORISNIK
+	///////////
+
+	///////////
+	//// POCETAK DJELATNIK
+	///////////
+
 	private void djelatnikIzbornik() {
-    	System.out.println("--------------------");	
-		System.out.println("Podizbornik 2. Djelatnici");		
+		System.out.println("--------------------");
+		System.out.println("Podizbornik 2. Djelatnici");
 		System.out.println("Odaberite akciju");
 		System.out.println(" 1. Pregled unesenih djelatnika");
 		System.out.println(" 2. Unos novog djelatnika");
@@ -168,11 +155,9 @@ public class Start {
 		System.out.println(" 5. Povratak u prethodni izbornik");
 		djelatnikUcitajAkciju();
 	}
-	
 
 	private void djelatnikUcitajAkciju() {
-		switch(Ulaz.ucitajInt("Odaberite akciju: ",
-				"Niste unijeli cijeli broj", 1, 5)) {
+		switch (Ulaz.ucitajInt("Odaberite akciju: ", "Niste unijeli cijeli broj", 1, 5)) {
 		case 1 -> djelatnikPregled();
 		case 2 -> djelatnikUnosNovog();
 		case 3 -> djelatnikPromjena();
@@ -183,19 +168,19 @@ public class Start {
 
 	private void djelatnikBrisanje() {
 		djelatnikStavke("Trenutno dostupno u aplikaciji");
-		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za brisanje: ", 
-				"Niste unijeli cijeli broj", 1, djelatnici.size());
-		djelatnici.remove(redniBroj-1);
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za brisanje: ", "Niste unijeli cijeli broj", 1,
+				djelatnici.size());
+		djelatnici.remove(redniBroj - 1);
 		djelatnikIzbornik();
 	}
 
 	private void djelatnikPromjena() {
 		djelatnikStavke("Trenutno dostupno u aplikaciji");
-		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za promjenu: ", 
-				"Niste unijeli cijeli broj", 1, djelatnici.size());
-		Djelatnik djelatnikZaPromjenu = djelatnici.get(redniBroj-1);
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za promjenu: ", "Niste unijeli cijeli broj", 1,
+				djelatnici.size());
+		Djelatnik djelatnikZaPromjenu = djelatnici.get(redniBroj - 1);
 		djelatnikZaPromjenu = djelatnikPostaviVrijednosti(djelatnikZaPromjenu);
-		djelatnici.set(redniBroj-1, djelatnikZaPromjenu);
+		djelatnici.set(redniBroj - 1, djelatnikZaPromjenu);
 		djelatnikIzbornik();
 	}
 
@@ -207,14 +192,10 @@ public class Start {
 	}
 
 	private Djelatnik djelatnikPostaviVrijednosti(Djelatnik d) {
-		d.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
-    			"Sifra mora biti cijeli broj",
-    			1, Integer.MAX_VALUE));
-    	d.setIme(Ulaz.ucitajString("Unesi ime predavaca: ",
-    			"Ime obavezno"));
-    	d.setPrezime(Ulaz.ucitajString("Unesi prezime predavaca: ",
-    			"Prezime obavezno"));
-    	d.setPcshop(Ulaz.ucitajString("Unesi ime PC Shopa: ", "Ime obavezno"));
+		d.setSifra(Ulaz.ucitajInt("Unesite sifru: ", "Sifra mora biti cijeli broj", 1, Integer.MAX_VALUE));
+		d.setIme(Ulaz.ucitajString("Unesi ime predavaca: ", "Ime obavezno"));
+		d.setPrezime(Ulaz.ucitajString("Unesi prezime predavaca: ", "Prezime obavezno"));
+		d.setPcshop(Ulaz.ucitajString("Unesi ime PC Shopa: ", "Ime obavezno"));
 		return d;
 	}
 
@@ -226,33 +207,28 @@ public class Start {
 	private void djelatnikStavke(String naslov) {
 		System.out.println(naslov);
 		System.out.println("--------------------");
-		if(djelatnici.size()==0) {
+		if (djelatnici.size() == 0) {
 			System.out.println("Nema unesenih djelatnika");
-		}else {
+		} else {
 			Djelatnik d;
-			for(int i=0;i<djelatnici.size();i++) {
-				d= djelatnici.get(i);
-				System.out.println((i + 1) + 
-						". " + d.getIme() + 
-						" " + d.getPrezime () + 
-						" " + d.getPcshop());
-			}	
-		}	
+			for (int i = 0; i < djelatnici.size(); i++) {
+				d = djelatnici.get(i);
+				System.out.println((i + 1) + ". " + d.getIme() + " " + d.getPrezime() + " " + d.getPcshop());
+			}
+		}
 	}
-	
-    ///////////
-    //// KRAJ DJELATNIK
-    ///////////
 
+	///////////
+	//// KRAJ DJELATNIK
+	///////////
 
+	///////////
+	//// POCETAK RACUN
+	///////////
 
-    ///////////
-    //// POCETAK RACUN
-    ///////////
-	
 	private void racunIzbornik() {
-    	System.out.println("--------------------");	
-		System.out.println("Podizbornik 3. Racuni");		
+		System.out.println("--------------------");
+		System.out.println("Podizbornik 3. Racuni");
 		System.out.println("Odaberite akciju");
 		System.out.println(" 1. Pregled unesenih racuna");
 		System.out.println(" 2. Unos novog racuna");
@@ -263,8 +239,7 @@ public class Start {
 	}
 
 	private void racunUcitajAkciju() {
-		switch(Ulaz.ucitajInt("Odaberite akciju: ", 
-				"Niste unijeli cijeli broj", 1, 5)) {
+		switch (Ulaz.ucitajInt("Odaberite akciju: ", "Niste unijeli cijeli broj", 1, 5)) {
 		case 1 -> racunPregled();
 		case 2 -> racunUnosNovog();
 		case 3 -> racunPromjena();
@@ -272,22 +247,22 @@ public class Start {
 		case 5 -> glavniIzbornik();
 		}
 	}
-	
+
 	private void racunBrisanje() {
 		racunStavke("Trenutno dostupno u aplikaciji");
-		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za brisanje: ", 
-				"Niste unijeli cijeli broj", 1, racuni.size());
-		racuni.remove(redniBroj-1);
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za brisanje: ", "Niste unijeli cijeli broj", 1,
+				racuni.size());
+		racuni.remove(redniBroj - 1);
 		racunIzbornik();
 	}
 
 	private void racunPromjena() {
 		racunStavke("Trenutno dostupno u aplikaciji");
-		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za promjenu: ", 
-				"Niste unijeli cijeli broj", 1, racuni.size());
-		Racun racunZaPromjenu = racuni.get(redniBroj-1);
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za promjenu: ", "Niste unijeli cijeli broj", 1,
+				racuni.size());
+		Racun racunZaPromjenu = racuni.get(redniBroj - 1);
 		racunZaPromjenu = racunPostaviVrijednosti(racunZaPromjenu);
-		racuni.set(redniBroj-1, racunZaPromjenu);
+		racuni.set(redniBroj - 1, racunZaPromjenu);
 		racunIzbornik();
 	}
 
@@ -299,21 +274,16 @@ public class Start {
 	}
 
 	private Racun racunPostaviVrijednosti(Racun r) {
-		r.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
-    			"Sifra mora biti cijeli broj",
-    			1, Integer.MAX_VALUE));
-		r.setBrojracuna(Ulaz.ucitajInt("Unesi broj racuna :",
-				"Niste unijeli cijeli broj", 1, 10000));
+		r.setSifra(Ulaz.ucitajInt("Unesite sifru: ", "Sifra mora biti cijeli broj", 1, Integer.MAX_VALUE));
+		r.setBrojracuna(Ulaz.ucitajInt("Unesi broj racuna :", "Niste unijeli cijeli broj", 1, 10000));
 		r.setNazivproizvoda(Ulaz.ucitajString("Unesite naziv proizvoda: ", "Naziv proizvoda obavezan"));
-		r.setCijena(Ulaz.ucitajDouble("Unesi cijenu: ", 
-				"Cijena mora biti decimalni broj", 0, 100000));
+		r.setCijena(Ulaz.ucitajDouble("Unesi cijenu: ", "Cijena mora biti decimalni broj", 0, 100000));
 		r.setKolicina(Ulaz.ucitajInt("Unesite kolicinu: ", "Unos mora biti cijeli broj", 1, 99));
 		r.setDatumpocetka(Ulaz.ucitajDatum("Unesi datum kupnje: "));
-    	r.setDatumpocetka(Ulaz.ucitajDatum("Unesi datum trajanja garancije: "));
-    	r.setNacinplacanja(Ulaz.ucitajString("Unesite nacin placanja: ", 
-				"Nacin placanja obavezan"));
-    	r.setIznosracuna(Ulaz.ucitajDouble("Iznos racuna: ", "Iznos obavezan", 0, 100000));
-    	
+		r.setDatumpocetka(Ulaz.ucitajDatum("Unesi datum trajanja garancije: "));
+		r.setNacinplacanja(Ulaz.ucitajString("Unesite nacin placanja: ", "Nacin placanja obavezan"));
+		r.setIznosracuna(Ulaz.ucitajDouble("Iznos racuna: ", "Iznos obavezan", 0, 100000));
+
 		return r;
 	}
 
@@ -325,37 +295,30 @@ public class Start {
 	private void racunStavke(String naslov) {
 		System.out.println(naslov);
 		System.out.println("--------------------");
-		if(racuni.size()==0) {
+		if (racuni.size() == 0) {
 			System.out.println("Nema unesenih racuna");
-		}else {
+		} else {
 			Racun r;
-			for(int i=0;i<racuni.size();i++) {
-				r= racuni.get(i);
-				System.out.println((i + 1) + ". " + r.getBrojracuna() + 
-						" " + r.getNazivproizvoda() + 
-						" " + r.getCijena() + 
-						" " + r.getKolicina() + 
-						" " + r.getDatumpocetka() + 
-						" " + r.getDatumpocetka() + 
-						" " + r.getNacinplacanja() + 
-						" " + r.getIznosracuna());
-			}	
+			for (int i = 0; i < racuni.size(); i++) {
+				r = racuni.get(i);
+				System.out.println((i + 1) + ". " + r.getBrojracuna() + " " + r.getNazivproizvoda() + " "
+						+ r.getCijena() + " " + r.getKolicina() + " " + r.getDatumpocetka() + " " + r.getDatumpocetka()
+						+ " " + r.getNacinplacanja() + " " + r.getIznosracuna());
+			}
 		}
 	}
 
-    ///////////
-    //// KRAJ RACUN
-    ///////////
+	///////////
+	//// KRAJ RACUN
+	///////////
 
+	///////////
+	//// POCETAK PROIZVOD
+	///////////
 
-
-    ///////////
-    //// POCETAK PROIZVOD
-    ///////////
-	
 	private void proizvodIzbornik() {
-    	System.out.println("--------------------");	
-		System.out.println("Podizbornik 4. Proizvodi");		
+		System.out.println("--------------------");
+		System.out.println("Podizbornik 4. Proizvodi");
 		System.out.println("Odaberite akciju");
 		System.out.println(" 1. Pregled unesenih proizvoda");
 		System.out.println(" 2. Unos novog proizvoda");
@@ -364,10 +327,9 @@ public class Start {
 		System.out.println(" 5. Povratak u prethodni izbornik");
 		proizvodUcitajAkciju();
 	}
-	
+
 	private void proizvodUcitajAkciju() {
-		switch(Ulaz.ucitajInt("Odaberite akciju: ", 
-				"Niste unijeli cijeli broj", 1, 5)) {
+		switch (Ulaz.ucitajInt("Odaberite akciju: ", "Niste unijeli cijeli broj", 1, 5)) {
 		case 1 -> proizvodPregled();
 		case 2 -> proizvodUnosNovog();
 		case 3 -> proizvodPromjena();
@@ -378,19 +340,19 @@ public class Start {
 
 	private void proizvodBrisanje() {
 		proizvodStavke("Trenutno dostupno u aplikaciji");
-		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za brisanje: ", 
-				"Niste unijeli cijeli broj", 1, proizvodi.size());
-		proizvodi.remove(redniBroj-1);
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za brisanje: ", "Niste unijeli cijeli broj", 1,
+				proizvodi.size());
+		proizvodi.remove(redniBroj - 1);
 		proizvodIzbornik();
 	}
 
 	private void proizvodPromjena() {
 		proizvodStavke("Trenutno dostupno u aplikaciji");
-		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za promjenu: ", 
-				"Niste unijeli cijeli broj", 1, proizvodi.size());
-		Proizvod proizvodZaPromjenu = proizvodi.get(redniBroj-1);
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za promjenu: ", "Niste unijeli cijeli broj", 1,
+				proizvodi.size());
+		Proizvod proizvodZaPromjenu = proizvodi.get(redniBroj - 1);
 		proizvodZaPromjenu = proizvodPostaviVrijednosti(proizvodZaPromjenu);
-		proizvodi.set(redniBroj-1, proizvodZaPromjenu);
+		proizvodi.set(redniBroj - 1, proizvodZaPromjenu);
 		proizvodIzbornik();
 	}
 
@@ -402,21 +364,14 @@ public class Start {
 	}
 
 	private Proizvod proizvodPostaviVrijednosti(Proizvod p) {
-		p.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
-    			"Sifra mora biti cijeli broj",
-    			1, Integer.MAX_VALUE));
-		p.setNaziv(Ulaz.ucitajString("Unesite naziv :", 
-				"Naziv obavezan"));
-		p.setCijena(Ulaz.ucitajDouble("Unesi cijenu: ", 
-				"Cijena mora biti decimalni broj", 0, 100000));
-		p.setOpisProizvoda(Ulaz.ucitajString("Unesite opis proizvoda: ",
-				"Opis obavezan"));
-		p.setKodArtikla(Ulaz.ucitajString("Unesite kod artikla: ", 
-				"Kod obavezan"));
-		p.setDostupnostZaKupnju(Ulaz.ucitajBoolean("Unesite oznaku da li je " 
-				+ "proizvod dostupan: " , "Kriva vrijednost" ));
-		p.setCertifikat(Ulaz.ucitajBoolean("Unesite oznaku da li je " 
-    			+ "proizvod certificiran: ", "Kriva vrijednost"));
+		p.setSifra(Ulaz.ucitajInt("Unesite sifru: ", "Sifra mora biti cijeli broj", 1, Integer.MAX_VALUE));
+		p.setNaziv(Ulaz.ucitajString("Unesite naziv :", "Naziv obavezan"));
+		p.setCijena(Ulaz.ucitajDouble("Unesi cijenu: ", "Cijena mora biti decimalni broj", 0, 100000));
+		p.setOpisProizvoda(Ulaz.ucitajString("Unesite opis proizvoda: ", "Opis obavezan"));
+		p.setKodArtikla(Ulaz.ucitajString("Unesite kod artikla: ", "Kod obavezan"));
+		p.setDostupnostZaKupnju(
+				Ulaz.ucitajBoolean("Unesite oznaku da li je " + "proizvod dostupan: ", "Kriva vrijednost"));
+		p.setCertifikat(Ulaz.ucitajBoolean("Unesite oznaku da li je " + "proizvod certificiran: ", "Kriva vrijednost"));
 		p.setGarancija(Ulaz.ucitajDatum("Unesi datum trajanja garancije: "));
 		return p;
 	}
@@ -429,27 +384,23 @@ public class Start {
 	private void proizvodStavke(String naslov) {
 		System.out.println(naslov);
 		System.out.println("--------------------");
-		if(proizvodi.size()==0) {
+		if (proizvodi.size() == 0) {
 			System.out.println("Nema unesenih proizvoda");
-		}else {
+		} else {
 			Proizvod p;
-			for(int i=0;i<proizvodi.size();i++) {
-				p= proizvodi.get(i);
-				System.out.println((i + 1) + ". " + p.getNaziv() + 
-						" " + p.getCijena() +
-						" " + p.getOpisProizvoda() + 
-						" " + p.getKodArtikla() + 
-						" " + p.isDostupnostZaKupnju() + 
-						" " + p.isCertifikat() + 
-						" " + p.getGarancija());
-			}	
+			for (int i = 0; i < proizvodi.size(); i++) {
+				p = proizvodi.get(i);
+				System.out.println((i + 1) + ". " + p.getNaziv() + " " + p.getCijena() + " " + p.getOpisProizvoda()
+						+ " " + p.getKodArtikla() + " " + p.isDostupnostZaKupnju() + " " + p.isCertifikat() + " "
+						+ p.getGarancija());
+			}
 		}
 	}
 
-    ///////////
-    //// KRAJ PROIZVOD
-    ///////////
-	
+	///////////
+	//// KRAJ PROIZVOD
+	///////////
+
 	public static void main(String[] args) {
 		new Start();
 	}

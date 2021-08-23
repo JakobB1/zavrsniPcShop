@@ -5,24 +5,17 @@ import java.util.Scanner;
 import java.text.SimpleDateFormat;
 
 public class Ulaz {
-	
+
 	public static Scanner scanner;
-	
-	
-	public static int ucitajInt(
-			String poruka,
-			String greska,
-			int min,
-			int max) {
+
+	public static int ucitajInt(String poruka, String greska, int min, int max) {
 		int broj = 0;
-		while(true) {
+		while (true) {
 			System.out.print(poruka);
 			try {
-				broj = Integer.parseInt(
-						scanner.nextLine());
-				if (broj<min || broj>max) {
-					System.out.println("Broj ne smije biti manji od " + min
-				+ " ili veci od " + max);
+				broj = Integer.parseInt(scanner.nextLine());
+				if (broj < min || broj > max) {
+					System.out.println("Broj ne smije biti manji od " + min + " ili veci od " + max);
 					continue;
 				}
 				break;
@@ -32,16 +25,13 @@ public class Ulaz {
 		}
 		return broj;
 	}
-	
-	
-	public static String ucitajString(
-			String poruka, 
-			String greska) {
+
+	public static String ucitajString(String poruka, String greska) {
 		String s = "";
-		while(true) {
+		while (true) {
 			System.out.print(poruka);
 			s = scanner.nextLine();
-			if(s.trim().equals("")) {
+			if (s.trim().equals("")) {
 				System.out.println(greska);
 				continue;
 			}
@@ -49,22 +39,15 @@ public class Ulaz {
 		}
 		return s;
 	}
-	
-	
-	public static double ucitajDouble(
-			String poruka, 
-			String greska,
-			int min,
-			int max) {
+
+	public static double ucitajDouble(String poruka, String greska, int min, int max) {
 		double broj = 0;
-		while(true) {
+		while (true) {
 			System.out.println(poruka);
 			try {
-				broj = Double.parseDouble(
-						scanner.nextLine());
-				if (broj<min || broj>max) {
-					System.out.println("Broj ne smije biti manji od " + min
-							+ " ili veci od " + max);
+				broj = Double.parseDouble(scanner.nextLine());
+				if (broj < min || broj > max) {
+					System.out.println("Broj ne smije biti manji od " + min + " ili veci od " + max);
 					continue;
 				}
 				break;
@@ -74,37 +57,32 @@ public class Ulaz {
 		}
 		return broj;
 	}
-	
-	
-	public static boolean ucitajBoolean (
-			String poruka,
-			String greska) {
+
+	public static boolean ucitajBoolean(String poruka, String greska) {
 		String s;
-		while(true) {
+		while (true) {
 			System.out.print(poruka);
 			s = scanner.nextLine();
-			if(s.trim().toLowerCase().equals("da")) {
+			if (s.trim().toLowerCase().equals("da")) {
 				return true;
 			}
-			if(s.trim().toLowerCase().equals("ne")) {
+			if (s.trim().toLowerCase().equals("ne")) {
 				return false;
 			}
 			System.out.println(greska + " (unos da/ne)");
 		}
 	}
-	
-	
-	public static final String FORMAT_DATUM="dd.MM.yyyy.";
-	
+
+	public static final String FORMAT_DATUM = "dd.MM.yyyy.";
+
 	public static Date ucitajDatum(String poruka) {
 		SimpleDateFormat df = new SimpleDateFormat(FORMAT_DATUM);
-		while(true) {
+		while (true) {
 			System.out.print(poruka);
 			try {
 				return df.parse(scanner.nextLine());
 			} catch (Exception e) {
-				System.out.println("Ne ispravan format datuma."
-						+ "Primjer unosa: " +df.format(new Date()));
+				System.out.println("Ne ispravan format datuma." + "Primjer unosa: " + df.format(new Date()));
 			}
 		}
 	}
