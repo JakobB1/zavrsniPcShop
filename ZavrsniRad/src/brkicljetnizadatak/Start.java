@@ -55,8 +55,7 @@ public class Start {
 
 	///////////
 	//// POCETAK KORISNIK
-	///////////
-
+	
 	private void korisnikIzbornik() {
 		System.out.println("--------------------");
 		System.out.println("Podizbornik 1. Korisnici");
@@ -136,14 +135,13 @@ public class Start {
 
 	}
 
-	///////////
 	//// KRAJ KORISNIK
 	///////////
 
+	
 	///////////
 	//// POCETAK DJELATNIK
-	///////////
-
+	
 	private void djelatnikIzbornik() {
 		System.out.println("--------------------");
 		System.out.println("Podizbornik 2. Djelatnici");
@@ -218,14 +216,13 @@ public class Start {
 		}
 	}
 
-	///////////
 	//// KRAJ DJELATNIK
 	///////////
 
+	
 	///////////
 	//// POCETAK RACUN
-	///////////
-
+	
 	private void racunIzbornik() {
 		System.out.println("--------------------");
 		System.out.println("Podizbornik 3. Racuni");
@@ -308,14 +305,13 @@ public class Start {
 		}
 	}
 
-	///////////
 	//// KRAJ RACUN
 	///////////
 
+	
 	///////////
 	//// POCETAK PROIZVOD
-	///////////
-
+	
 	private void proizvodIzbornik() {
 		System.out.println("--------------------");
 		System.out.println("Podizbornik 4. Proizvodi");
@@ -397,7 +393,6 @@ public class Start {
 		}
 	}
 
-	///////////
 	//// KRAJ PROIZVOD
 	///////////
 
