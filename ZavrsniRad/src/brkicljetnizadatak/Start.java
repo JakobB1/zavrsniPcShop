@@ -332,13 +332,13 @@ public class Start {
 			for(int i=0;i<racuni.size();i++) {
 				r= racuni.get(i);
 				System.out.println((i + 1) + ". " + r.getBrojracuna() + 
-						" Naziv: " + r.getNazivproizvoda() + 
-						" Cijena: " + r.getCijena() + 
-						" Kolicina: " + r.getKolicina() + 
-						" Datum kupnje: " + r.getDatumpocetka() + 
-						" Datum garancije: " + r.getDatumpocetka() + 
-						" Nacin placanja: " + r.getNacinplacanja() + 
-						" Iznos: " + r.getIznosracuna());
+						" " + r.getNazivproizvoda() + 
+						" " + r.getCijena() + 
+						" " + r.getKolicina() + 
+						" " + r.getDatumpocetka() + 
+						" " + r.getDatumpocetka() + 
+						" " + r.getNacinplacanja() + 
+						" " + r.getIznosracuna());
 			}	
 		}
 	}
