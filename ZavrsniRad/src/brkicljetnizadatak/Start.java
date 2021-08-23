@@ -214,7 +214,7 @@ public class Start {
     			"Ime obavezno"));
     	d.setPrezime(Ulaz.ucitajString("Unesi prezime predavaca: ",
     			"Prezime obavezno"));
-    	d.setPcshop(Ulaz.ucitajString("Unesi ime PC Shop:", "Ime obavezno"));
+    	d.setPcshop(Ulaz.ucitajString("Unesi ime PC Shopa: ", "Ime obavezno"));
 		return d;
 	}
 
